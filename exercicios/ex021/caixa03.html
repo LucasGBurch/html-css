@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Borda</title>
+    <style>
+       h1 {
+            border: 20px solid black; /*Precisa existir esta normal para a imagem se aplicar!!*/
+            padding: 10px;
+            /*Dá pra mudar de black pra transparent se o navegador não for compatível com imagem*/
+
+            border-image: url('./borda.png') 27 repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Borda</h1>
+</body>
+</html>

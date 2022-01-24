@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vídeos com HTML5</title>
+</head>
+<body>
+<!--Padrões de vídeos: MP4/M4V, WEBM (podrinho), OGV: usar conversores-->
+
+	<h1>Inserindo vídeos hospedados localmente</h1>
+	<p>Este vídeo está hospedado no meu próprio servidor</p>
+
+	<!--Primeiro modelo num formato. Recomendável usar todos os formatos (não baixei/converti, windows 7 não instala o HandBrake...tem conversores na web também):-->
+	<video width="560" controls autoplay loop> <!--Cabe também poster="/imagens/imagem.png" etc-->
+		<source src="midia/meuvideo.mp4" type="video/mp4">
+	<!--<source src="midia/meuvideo.m4v" type="video/mp4"> do menor ao maior
+		<source src="midia/meuvideo.webm" type="video/webm"> qualidade sofrível
+		<source src="midia/meuvideo.ogv" type="video/ogg">
+		<p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+	-->
+	</video>
+
+	<!--ATENÇÃO! VÍDEOS HOSPEDADOS CUSTAM CARO AO SITA POR CAUSA DO CONSUMO DE BANDA. POR ISSO É PREFERÍVEL INCORPORAR VÍDEOS EXTERNAMENTE EM VEZ DOS ARMAZENADOS NO SERVIDOR!!!-->
+	<!--SOLUÇÃO: INCORPORAR DE REPOSITÓRIOS, TAIS COMO O YOUTUBE (Compartilhar -> Incorporar)-->
+
+	<h1>Inserindo vídeos do YouTube. Segundo <br> maior buscador depois do google:</h1>
+	<p>Consome dados do YouTube, não do nosso servidor, ao contrário do anterior:</p>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/eF9Qoc6p_4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<!--Problema dele é não poder restringir conteúdo no site pra assinantes.
+		Nesse caso, outros serviços, como o VIMEO funcionam pra isso.
+		Seu algoritmo é pior na reprodução e busca, mas sua qualidade é ótima!-->
+
+	<h1>Inserindo vídeos do VIMEO (mais personalizado):</h1>
+	<iframe src="https://player.vimeo.com/video/197093965?h=7fbc516b5a&color=ff9933&portrait=0" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

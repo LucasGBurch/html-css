@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Outras Formatações</title>
+	
+</head>
+<body>
+	<h1>Outras Formatações</h1>
+	<h2>Código-fonte / Pré-formatação</h2>
+	<p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.
+	Essa é uma fonte "monoespaçada".</p>
+
+	<pre> <!--A tag pre faz até a identação (quebras de linha etc) serem levadas em conta!-->
+		<code> <!--o Code "monoespaça" os caracteres diferentes, melhor para ler código-->
+	num = int(input('Digite um número neste Python'))
+	if num % 2 == 0:
+		print(f'O número {num} é PAR')
+	else:
+		print(f'O número {num} é ÍMPAR')
+	print('Fim do programa')
+		</code>
+	</pre>
+
+	<h2>Citações Simples</h2>
+	<!--q = quote, significa citação e coloca "aspas" só que dando semântica de citação.-->
+	<p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido.</q></p>
+
+	<h2>Citações Completas</h2>
+	<p>Segundo Jeff Noble, no seu livro HTML para Leigos:</p>
+	<blockquote cite="https://www.google.com.br/books/edition/HTML_XHTML_e_CSS_Para_Leigos/E8ZtDwAAQBAJ?hl=pt-BR&gbpv=0">
+		A diferença entre elementos online e um bloco de texto é importante.
+		Os elementos HTML neste capítulo descrevem os blocos de texto.
+	</blockquote> <!--A parte interna do site "saberá" que está referenciando o livro.-->
+
+	<h2>Abreviações</h2>
+	<p>Estou estudando
+	<abbr title="HyperText Markup Language">HTML</abbr> e
+	<abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando!</p>
+	<!--Passar o Mouse nas abreviações no site para ver o title da tag abbr!-->
+
+	<h2>Texto Invertido (só pra irritar alunos)</h2>
+	<p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML</bdo></p>
+	<!--rtl = right to left; ltr = left to right (normal)-->
+</body>
+</html>

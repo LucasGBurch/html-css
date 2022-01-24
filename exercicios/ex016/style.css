@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* { /* configurações globais */
+    font-family: Arial, Helvetica, sans-serif;
+    /* height: 100%; */
+}
+
+body {
+    background-image: linear-gradient(to right, #D2D4C8, #E0E2DB, #B8BDB5);
+}
+
+main {
+    background-color: white;
+    border-radius: 20px; /* ARREDONDA AS PONTAS!! */
+    box-shadow: 5px 5px 15px rgba(43, 65, 98, 0.8); /* alfa suavizou a cor */
+    /* Sombreamento da caixa (lado, baixo, espalhar, cor-transparência)*/
+
+    width: 600px; /* Limitar largura desse main */
+    padding: 10px; /* Acomoda o conteúdo/texto e suas bordas */
+    margin: auto; /* Centraliza automaticamente, independente da tela! */
+}
+
+h1 {
+    color: #2B4162;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(43, 65, 98, 0.8);
+}
+
+h2 {
+    color: #385F71;
+}
+
+p {
+    text-align: justify;
+}

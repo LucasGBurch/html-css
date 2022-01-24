@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        div {
+            display: inline-block; /*Tudo na mesma linha (a menos que "quebre")*/
+            background-color: lightgray;
+            border: 1px solid black; /*Borda: tamanho, tipo e cor*/
+            text-align: center;
+            height: 200px; /*Altura*/
+            width: 200px; /*Largura*/
+        }
+            /*# é para id, . é para classe... : são para PSEUDOCLASSES!!*/
+
+        div:hover {
+            background-color: yellow; /*Passa o mouse em cima, elas ficam dessa cor no hover*/
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+</html>

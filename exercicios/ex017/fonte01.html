@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS - Medidas, seleções, pesos (negrito) e combinações</title>
+    <style>
+        body { /* Ao colocar serif, sans (sem) serif, monospace etc.
+            ELE PEGA QUALQUER FONTE COM ESSA CARACTERÍSTICA!
+            Por isso definimos antes*/
+            font-family: Arial, Helvetica, sans-serif;
+
+            /* Medidas Absolutas:
+            cm, mm, in (polegada), px, pt (ponto), pc (paica). pt e pc são de papel (não sites).
+            Medidas Relativas:
+            em (letra maiúscula), ex (altura x da fonte), rem (em do "root", body)
+            vw (viewwidth, % da largura da viewport), vh (viewheight, % altura da viewport)
+            
+            Usaremos mais Pixel (px) e em, mas o em é mais recomendável
+            16px geralmente = 1em (são os tamanhos padrão de fontes) */
+
+            font-size: 1em;
+            
+        }
+
+        h1 {
+            /*
+            font-weight: bold;
+            /*Peso da fonte (negrito): font-weight. Tem os tipos: lighter, normal, bold e bolder*/
+            /*Verdana, Arial e Times não variam muito, por isso só vi bold e normal no peso delas*/
+            
+            /*
+            font-size: 3em;
+            font-style: italic;
+            text-decoration: underline; Negrito, itálico e sublinhado
+            */
+            
+            
+        /*SHORTHAND FONT SIMPLIFICA ASSIM: Style -> Weight -> Size -> Family*/
+            font: italic bolder 3em 'Work Sans', 'sans-serif';
+        }
+
+        h2 { /*Dá pra fazer sem style ou outros da ordem, por exemplo:*/
+            font: bold 2em 'sans-serif';
+        }
+
+    </style> <!--"Arial, Helvetica, sans-serif = Se não acha Arial, vai para Helvetica,
+            senão vai para uma genérica das "sem serifa"
+            (método das WEB SAFE FONT COMBINATIONS) ver mais em:
+            https://www.w3schools.com/cssref/css_websafe_fonts.asp
+        
+            MAS O VSCODE JÁ RECONHECE VÁRIAS DESSAS COMBINAÇÕES!! (mas nem todas)-->
+</head>
+<!--Testes com fontes no body: FICANDO MAIS LEGÍVEL QUE A PADRÃO (times new roman)-->
+<body> 
+    <h1>Trabalhando com Fontes</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias modi reprehenderit soluta veritatis iure harum incidunt pariatur blanditiis quaerat? Incidunt facere temporibus fugiat cum non tempore nam adipisci consequatur quos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, reprehenderit! Nostrum deserunt accusantium corporis, beatae sed quam modi cum laboriosam, autem sit aut. Odio consectetur, alias ullam quod facilis neque.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid doloribus dolorum ratione molestias officiis nam nisi ducimus natus quae quaerat voluptatum dolor sit libero veritatis nostrum perspiciatis, molestiae velit odio.</p>
+
+    <h2>Subtítulo de Exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae at illo officiis. Tempora dolor laborum itaque minus maiores, nulla, eligendi magni quisquam similique quod quas, eius odit vel! Adipisci, amet?</p>
+</body>
+</html>

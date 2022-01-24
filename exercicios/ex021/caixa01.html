@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 { /*BOX-LEVEL (muda com display)*/
+
+            background-color: lightgray;
+
+            height: 300px;
+            width: 300px;
+            
+            /*Substituindo partes da border com "shorthands":*/
+            border: 10px solid darkslategray;
+
+            /*Shorthands com ordem de um relógio: top, right, bot e left*/
+            padding: 10px 20px; /*Quatro iguais só precisa botar uma (pode ver no navegador)*/
+            /*cima-baixo e direita-esquerda usa duas!!*/
+
+            /*margin: auto; centraliza a margem para todos os tamanhos de navegador!*/
+            
+            margin: 20px auto 40px auto;
+
+            outline: 5px dashed salmon; /*width, style e color via shorthand!*/
+        }
+
+        a { /*INLINE-LEVEL (muda com display)*/
+
+            border: 10px solid red;
+
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.</p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mídias em HTML5</title>
+</head>
+<body>
+	<h1>Imagem dinâmica</h1>
+	<p>Tente abrir esse site em vários dispositivos diferentes, <br>
+	ou smplesmente aumente e diminua o tamanho do seu navegador.
+	</p>
+
+	<!--Problemas como a imagem não se moldar gera aumento em taxas de rejeição do google (Bounce Rate), o que desvaloriza o site, por isso tornamos ela flexível usando <source media type>-->
+
+	<!--A ROLAGEM LATERAL COSTUMA IRRITAR VISITANTES, POR ISSO CONDIÇÃO DO MAX-WIDTH:-->
+	<picture>
+		<!--vai da menor pra maior! NUNCA INVERTER!! Não funciona a menor se inverter.-->
+		<source media= "(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+		<!--Vai mudar pra imagem menor quando a dela está menor que 1000px + 50px (barra de rolagem)-->
+		<source media= "(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+		<img src="imagens/foto-g.png" alt="Imagem flexível">
+	</picture>
+
+	<!--A BOUNCE RATE FICA MENOR SE A PÁGINA NÃO TIVER A BARRA LATERAL DE ROLAGEM, PERMITINDO UMA MELHOR EXPERIÊNCIA DE NAVEGAÇÃO AOS USUÁRIOS, QUE FICAM NO SITE MAIS TEMPO.-->
+
+	<!--ADICIONANDO AUDIOS: SEMPRE CUIDAR COM AS LICENÇAS (ATRIBUIÇÃO NECESSÁRIA) OLHAR BIBLIOTECA DE AUDIO DO YOUTUBE STUDIO-->
+
+	<h1>Reproduzindo Áudio</h1>
+	<p>Vamos aprender a reproduzir áudios em HTML5.</p>
+
+	<!-- <audio src="midia/americanidlerkvc.mp3" controls autoplay></audio> -->
+
+	<!--autoplay não funciona no chrome atualmente (MP3, WAV(muito pesado) e OGG são os formatos que mais funcionam)-->
+
+	<!--Outra forma de usar a tag audio: primeiro tenta carregar mp3, e vai tentando nessa ordem!-->
+	<audio preload="metadata" controls loop> 
+		<!--preload="metadata" são informações básicas carregadas; loop recomeça quando termina-->
+		<source src="midia/americanidlerkvc.mp3" type="audio/mpeg">
+		<source src="midia/americanidlerkvc.mp3" type="audio/ogg">
+		<source src="midia/americanidlerkvc.mp3" type="audio/wav">
+		<p>Infelizmente seu navegador não consegue reproduzir áudio.</p>
+	</audio>
+
+</body>
+</html>
