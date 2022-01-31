@@ -3,8 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 @font-face {
-    font-family: 'head';
+    font-family: 'creamcake';
     src: url('../fontes/Cream_Cake.otf') format('opentype');
+}
+
+:root { /*Variáveis das fontes que escolhi:
+    (prof usou "Passion One" (header) e "Sriracha" (texto)*/
+    --fonte-titulo: 'creamcake', cursive;
+    --fonte-poema: 'Lobster', cursive;
+    --fonte-normal: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 * {
@@ -16,15 +23,8 @@ html, body { /*adicionei pela aula, mas não parece fazer diferença*/
     min-height: 100vh; /*não botei bg color porque body nem aparece*/
 }
 
-:root { /*Variáveis das fontes que escolhi:*/
-    --fonte-head: 'head', cursive;
-    --fonte-poema: 'Lobster', cursive;
-}
-
-
 header {
     background-color: black;
-    font-family: var(--fonte-head);
     color: white;
     margin: auto;
     padding: 30px;
@@ -35,13 +35,14 @@ header {
 
 header h1 {
     font-weight: bold;
-    font-size: 3.5em;
+    font-family: var(--fonte-titulo);
+    font-size: 3.8em;
     padding-top: 40px;
 }
 
 header p {
-    font-weight: bold;
-    font-size: 1.5em;
+    font-family: var(--fonte-normal);
+    font-size: 1.2em;
     /*font-variant: small-caps;
     opção para fontes que as minúsculas ficam bem
     com caps reduzido (pra fonte que escolhi preferi não usar)*/
@@ -99,16 +100,19 @@ section.imgpoema {
 }
 
 section.imgflor > p, section.imgpoema > p {
+    display: inline-block; /* parágrafo se ajusta ao conteúdo
+    Bem útil pra letras que mudam de tamanho com a largura
+    Ex: font-size: 5vw (viewport width) não fiz isso pq fica feio -.- */
     background-color: rgba(0, 0, 0, 0.219);
-    width: 300px;
     padding: 20px;
 }
 
 footer {
     background-color: black;
+    font-family: var(--fonte-normal);
     color: white;
     text-align: center;
-    font-size: 1em;
+    font-size: 0.8em;
     padding: 10px;
     min-width: 300px;
     margin: auto;
