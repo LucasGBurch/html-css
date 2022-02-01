@@ -74,10 +74,14 @@ section {
     line-height: 2em;
 }
 
+section > p {
+    padding-bottom: 2em; /*Para separar parágrafos da mesma seção!!*/
+}
+
 section.branco {
     background-color: white;
     color: black;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.507);
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.507);
     text-shadow: 2px 2px 0px rgba(211, 211, 211, 0.644);
 }
 
@@ -85,25 +89,25 @@ section.branco {
 background: color > image > position > repeat > attachment:
 */
 
-section.imgflor {
-    background: url(../imagens/background001.jpg) center no-repeat fixed;
+section.imgflor { /*o professor separou por ids: img01 e img02 e manteve uma classe imagem*/
+    background: url(../imagens/background001.jpg) right center no-repeat fixed;
     background-size: cover;
     color: white;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.507);
+    box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.507);
 }
 
-section.imgpoema {
-    background: url(../imagens/background002.jpg) center no-repeat fixed;
+section.imgpoema { /*Obs: O fixed é responsável pelo efeito Parallax. */
+    background: url(../imagens/background002.jpg) right center no-repeat fixed;
     background-size: cover;
     color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.507);
+    box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.507);
 }
 
 section.imgflor > p, section.imgpoema > p {
     display: inline-block; /* parágrafo se ajusta ao conteúdo
     Bem útil pra letras que mudam de tamanho com a largura
     Ex: font-size: 5vw (viewport width) não fiz isso pq fica feio -.- */
-    background-color: rgba(0, 0, 0, 0.219);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
 }
 
