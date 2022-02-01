@@ -27,7 +27,7 @@ header {
     background-color: black;
     color: white;
     margin: auto;
-    padding: 30px;
+    padding: 10px 20px 10px 20px;
     min-height: 200px;
     min-width: 300px;
     text-align: center;
@@ -36,13 +36,13 @@ header {
 header h1 {
     font-weight: bold;
     font-family: var(--fonte-titulo);
-    font-size: 3.8em;
+    font-size: 3.6em;
     padding-top: 40px;
 }
 
 header p {
     font-family: var(--fonte-normal);
-    font-size: 1.2em;
+    font-size: 1.0em;
     /*font-variant: small-caps;
     opção para fontes que as minúsculas ficam bem
     com caps reduzido (pra fonte que escolhi preferi não usar)*/
@@ -67,6 +67,7 @@ main {
     font-family: var(--fonte-poema);
     font-style: italic;
     font-size: 1.5em;
+    padding: 0px 15px 0px 15px;
 }
 
 section {
@@ -83,6 +84,7 @@ section.branco {
     color: black;
     box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.507);
     text-shadow: 2px 2px 0px rgba(211, 211, 211, 0.644);
+    background-size: cover;
 }
 
 /* SHORTHAND PRA IMAGENS/BACKGROUND
@@ -106,7 +108,8 @@ section.imgpoema { /*Obs: O fixed é responsável pelo efeito Parallax. */
 section.imgflor > p, section.imgpoema > p {
     display: inline-block; /* parágrafo se ajusta ao conteúdo
     Bem útil pra letras que mudam de tamanho com a largura
-    Ex: font-size: 5vw (viewport width) não fiz isso pq fica feio -.- */
+    Ex: font-size: 5vw (viewport width) não fiz isso pq fica feio -.-
+    Media queries (a ver no curso ainda) é o método correto para esse ajuste!!*/
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
 }
