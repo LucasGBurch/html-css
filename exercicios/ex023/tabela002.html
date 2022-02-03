@@ -10,7 +10,7 @@
         }
 
         table {
-            width: 600px;
+            width: 500px;
             height: 100px;
             border-collapse: collapse; /*Padrão é separate*/
             border: 4px solid lightskyblue;
@@ -22,13 +22,29 @@
             
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
             background-color: lightslategray;
             color: white;
 
         }
 
-        .numero {
+        tbody > tr:nth-child(odd) { /*2n = de 2 em 2 marca bg color*/
+            background-color: white; /*caso a cor de fundo não seja branca*/
+        } /*pseudoclasse para efeito zebrado*/
+
+        tbody > tr:nth-child(even) { /*2n = de 2 em 2 marca bg color*/
+            background-color: lightgray;
+        } /*Efeito "zebrado": facilita leitura de tabelas grandes!
+        2n - 1 ou odd marcaria ímpar, 2n ou even marca par*/
+
+        td.numero {
             text-align: right; /*Imitando padrão do excel*/
 
         }
@@ -40,6 +56,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION (TÍTULO/LEGENDA)
             THEAD
                 TR, TD, TH
             TBODY
@@ -48,34 +65,67 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>Dez Unidades Federativas mais Populosas</caption>
+        <!--assim como o footer, CAPTION SEMPRE FICA NO COMEÇO!!-->
         <thead>
-            <tr> <!-- Primeira Linha: -->
-                <th>Estado</th> 
-                <th>População</th>
-            </tr>
+            <tr> <!--Scope "demarca" que os dados da TH vão estar em coluna
+                 ou linha. Lá embaixo, no total/footer, é row. Isso é
+                importante para ferramentas de busca analisar de forma
+                coerente as nossas tabelas!! -->
+                <th scope="col">Estado</th> 
+                <th scope="col" style="width: 100px;">População</th>
+            </tr> <!-- dá até pra adicionar style adicional (os estados ficam com os 400px que "sobraram")-->
         </thead>
+        <tfoot> <!--A SEMÂNTICA SEMPRE VAI POSICIONAR O TFOOT POR ÚLTIMO!!-->
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="numero"><strong>158 604 772</strong></td>
+            </tr>
+        </tfoot>
         <tbody>
             <tr>
                 <td>São Paulo</td>
-                <td class="numero">45 919 049</td>
+                <td class="numero">46 649 132</td>
             </tr>
             <tr>
                 <td>Minas Gerais</td>
-                <td class="numero">21 168 791</td>
+                <td class="numero">21 411 923</td>
             </tr>
             <tr>
                 <td>Rio de Janeiro</td>
-                <td class="numero">17 264 943</td>
+                <td class="numero">17 463 349</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="numero">14 985 284</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="numero">11 597 484</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="numero">11 466 630</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="numero">9 674 793</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="numero">9 240 580</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="numero">8 777 124</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="numero">7 338 473</td>
             </tr>
             <!-- DÁ PRA FAZER TODAS COM A REFERÊNCIA DA TABELA DO WIKI-->
         </tbody>
 
-        <tfoot> <!--A SEMÂNTICA SEMPRE VAI POSICIONAR O TFOOT POR ÚLTIMO!!-->
-            <tr>
-                <th>Total de Habitantes</th>
-                <td class="numero"><strong>85,5 mi</strong></td>
-            </tr>
-        </tfoot>
     </table>
 </body>
 </html>
