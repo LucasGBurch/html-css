@@ -14,6 +14,7 @@
             height: 100px;
             border-collapse: collapse; /*Padrão é separate*/
             border: 4px solid lightskyblue;
+            position: relative;
         }
 
         td, th { /*th tem negrito (bold) e center por padrão*/
@@ -33,6 +34,14 @@
             background-color: lightslategray;
             color: white;
 
+        }
+
+        thead > tr > th { /*CABEÇALHO FIXO PARA TABELAS GRANDES: */
+            position: sticky;
+            top: -2px;
+            /*Colou na parte -2 (pra cobrir um espacinho do início da tabela)
+            MAAAS... precisa da bg color pra não ir só palavra do cabeçalho: */
+            background-color: lightslategray;
         }
 
         tbody > tr:nth-child(odd) { /*2n = de 2 em 2 marca bg color*/
@@ -65,7 +74,7 @@
                 TR, TD, TH
     -->
     <table>
-        <caption>Dez Unidades Federativas mais Populosas</caption>
+        <caption>Unidades Federativas do Brasil</caption>
         <!--assim como o footer, CAPTION SEMPRE FICA NO COMEÇO!!-->
         <thead>
             <tr> <!--Scope "demarca" que os dados da TH vão estar em coluna
@@ -79,7 +88,7 @@
         <tfoot> <!--A SEMÂNTICA SEMPRE VAI POSICIONAR O TFOOT POR ÚLTIMO!!-->
             <tr>
                 <th scope="row">Total de Habitantes</th>
-                <td class="numero"><strong>158 604 772</strong></td>
+                <td class="numero"><strong>213 317 639</strong></td>
             </tr>
         </tfoot>
         <tbody>
@@ -122,6 +131,74 @@
             <tr>
                 <td>Santa Catarina</td>
                 <td class="numero">7 338 473</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="numero">7 206 589</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="numero">7 153 262</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="numero">4 269 995</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="numero">4 108 508</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="numero">4 059 905</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="numero">3 567 234</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="numero">3 560 903</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="numero">3 365 351</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="numero">3 289 290</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="numero">3 094 325</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="numero">2 839 188</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="numero">2 338 474</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="numero">1 815 278</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="numero">1 607 363</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="numero">906 876</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="numero">877 613</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="numero">652 713</td>
             </tr>
             <!-- DÁ PRA FAZER TODAS COM A REFERÊNCIA DA TABELA DO WIKI-->
         </tbody>
