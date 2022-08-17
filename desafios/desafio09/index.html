@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,49 +8,59 @@
 	<title>Desafio 09 - Meus Vídeos</title>
 
 	<style>
+
+		/*Brinquei um pouco com paletas de cores e Flex-Wrap*/
 		body {
-        background: white;
-		text-align: center;
-	 }
+			align-items: center;
+			background: #87cefa;
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+		}
 
-	 h1 {
-		text-align: center;
-	 }
+		h1 {
+			padding: 24px;
+			text-align: center;
+		}
 
-    section {
-		border-radius: 1em
-		padding: 1em;
-		position: absolute;
-		top: 40%;
-		left: 50%;
-		margin-right: -50%;
-		transform: translate(-50%, -50%)
+		.links {
+			height: 140px;
+			margin-bottom: 12px;
+			padding: 16px;
+		}
+
+		.videos {
+			display: flex;
+			flex-wrap: wrap;
+			height: 400px;
+			justify-content: center;
+			width: 100%;
 		}
 	</style>
 
 </head>
+
 <body>
-	<section>
-		<h1>Vídeos Legais para Assistir:</h1>
+	<h1>Vídeos Legais para Assistir:</h1>
+	<section class="videos">
 
-		<p>
-			<a href="video1.html" rel="next" target="_self">
-				<img src="../imagens/video1.png">
-			</a>
+		<a class="links" href="video1.html" rel="next" target="_self">
+			<img src="./assets/img/video1.png" alt="imagem de vídeo">
+		</a>
 
-			<a href="video2.html" rel="next" target="_self">
-				<img src="../imagens/video2.png">
-			</a>
-		</p>
-			<a href="video3.html" rel="next" target="_self">
-				<img src="../imagens/video3.png">
-			</a>
+		<a class="links" href="video2.html" rel="next" target="_self">
+			<img src="./assets/img/video2.png" alt="imagem de vídeo">
+		</a>
+		<a class="links" href="video3.html" rel="next" target="_self">
+			<img src="./assets/img/video3.png" alt="imagem de vídeo">
+		</a>
 
-			<a href="video4.html" rel="next" target="_self">
-				<img src="../imagens/video4.png">
-			</a>
+		<a class="links" href="video4.html" rel="next" target="_self">
+			<img src="./assets/img/video4.png" alt="imagem de vídeo">
+		</a>
 
 	</section>
 
 </body>
+
 </html>
